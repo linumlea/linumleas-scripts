@@ -27,22 +27,21 @@
 
                 // Check if anchor text contains "html", "epub", or "pdf"
                 if (anchorText.includes('html')) {
-                    // Set timeout for clicking on the anchor element
                     anchorElement.click();
                 }
                 if (anchorText.includes('epub')) {
                     // Set timeout for clicking on the anchor element
                     setTimeout(() => {
                         anchorElement.click();
-                    }, 10000); // 1 minute timeout (60000 milliseconds)
+                    }, 20000); // 20s timeout
                 }
                 if (anchorText.includes('pdf')) {
                     // Set timeout for clicking on the anchor element
                     setTimeout(() => {
                         anchorElement.click();
-                    }, 20000); // 1 minute timeout (60000 milliseconds)
+                    }, 40000); // 40s timeout
                 }
             });
         });
-    }, 30000)
+    }, 30000) // 30s timeout before first download starts
 })();
